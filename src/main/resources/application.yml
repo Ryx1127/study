@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: enterprise-ai-agent-platform
+  profiles:
+    default: local
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+server:
+  port: 8080
+
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.example.text_two: info
